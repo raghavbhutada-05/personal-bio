@@ -1,0 +1,15 @@
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 600ms ease, transform 600ms ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.float-hover { transition: transform 300ms ease, box-shadow 300ms ease; }
+.float-hover:hover { transform: translateY(-4px); box-shadow: 0 14px 38px rgba(0,0,0,0.08); }
+
+/* Petals falling */
+.petals { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 1; }
+.petals span { position: absolute; top: -10vh; width: 16px; height: 16px; background-image: url('/assets/petals.svg'); background-size: cover; opacity: 0.8; filter: drop-shadow(0 4px 4px rgba(0,0,0,0.08)); animation: fall 12s linear infinite; }
+@keyframes fall { to { transform: translateY(120vh) rotate(360deg); } }
+.petals span:nth-child(odd) { width: 12px; height: 12px; animation-duration: 10s; opacity: 0.7; }
+.petals span:nth-child(3n) { width: 18px; height: 18px; animation-duration: 14s; opacity: 0.9; }
+
+
+
